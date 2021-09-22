@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Event Handling</title>
+        <script language="JavaScript" type="text/javascript">
+            function clickEventhandler(){
+                alert('Click event trigerred')
+            }
+
+            function mouseOverEventHandler(){
+                alert("Mouse Over Event Triggered")
+            }
+
+            function focusEventHandler(){
+                document.getElementById("username").style.backgroundColor = "green"
+            }
+            function BlurEventHandler(){
+                document.getElementById("username").style.backgroundColor = "yellow"
+            }
+        </script>
+    </head>
+    <body>
+        <form>
+            <input type="text" name="uname" id="username" onfocus="focusEventHandler()" onblur="BlurEventHandler()">
+            <input type="button" value="Click" onClick="clickEventhandler()">
+        </form>
+        <p onClick="clickEventhandler()">This is paragraph</p>
+        <p onmouseover="mouseOverEventHandler()">Mouse Over</p>
+    </body>
+</html>
