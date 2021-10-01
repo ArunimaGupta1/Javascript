@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+</head>
+
+<body>
+    <script language="Javascript" type="text/javascript">
+            /*
+                class className{
+                    variables
+                    functions
+
+                }
+            */
+           //Create an object of the class
+           class Person{
+               constructor(firstName,lastName){
+                   document.write("Constructor invoked <br>")
+                   this.firstName = firstName
+                   this.lastName = lastName
+               }
+               greet(){
+                   document.write("This is function inside Person class<br>")
+                   document.write("Hello "+this.firstName+" "+this.lastName)
+               }
+           }
+
+           var Person1 = new Person("Arunima","Gupta");
+           Person1.greet()
+
+
+    </script>
+</body>
+</html>

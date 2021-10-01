@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Async Demo</title>
+</head>
+
+<body>
+    <script language="Javascript" type="text/javascript">
+    // once a method is declared using async keyword it specifies that it is not going to return a value, but a promise
+    //      async function sayHello(){
+    //              return "Hello World"
+    //        }
+    //         sayHello()
+
+    function resolveAfter2Seconds(){
+        return new Promise(resolve =>{
+            setTimeout(() =>{
+                resolve('resolved');
+            },2000);
+            });
+        }
+
+        async function asyncCall(){
+            console.log('calling');
+            const result = await resolveAfter2Seconds();
+            console.log(result);
+            // expected output : "resolved"
+        }
+
+        asyncCall();
+        asyncCall();
+        asyncCall();
+    </script>
+</body>
+
+</html>

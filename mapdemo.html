@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+</head>
+
+<body>
+    <script language="Javascript" type="text/javascript">
+        // map object is added in ES6
+        // map holds the collection as key-value pair
+        // key is unique identifier for every value
+        // values can be repeated
+        // new Map([iterable])
+        emp = new Map([
+            ["empID", 1010],
+            ["empName","John"],
+            ["designation", "Developer"],
+            ["exp", 5]
+            ])
+        console.log(emp)
+        console.log(emp.size)//returns number of key-value pairs in a map
+
+        emp.set("location","Delhi")// addsa new key-value pair to existing map
+        console.log(emp)
+        console.log(emp.size)
+        
+        //will search for a key,this operation is not value-based
+        console.log(emp.has("exp"))
+        console.log(emp.has("address"))
+        console.log(emp.has("John"))
+        
+        //fetch the value associated with a key
+        console.log(emp.get("designation"))
+
+        //delete a key-value pair
+        //emp.delete("exp")
+        
+        var keys = emp.keys();
+        for(var key of keys){
+            console.log(key+"- "+emp.get(key))
+        }
+
+        var val = emp.values();
+        for(var value of val){
+            console.log(value);
+        }
+
+        function printMap(key,value){
+            console.log(key+" : "+val)
+        }
+        emp.forEach(printMap);
+
+        // Map.prototype[@@iterator]()
+        var itr = emp[Symbol.iterator]();
+        for(var element of itr){
+            console.log(element)
+        }
+
+    </script>
+</body>
+
+</html>

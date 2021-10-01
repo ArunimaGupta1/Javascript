@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+
+    </head>
+    <body>
+        <script language="Javascript" type="text/javascript">
+               var username = "Arunima" // a variable with global scope
+               console.log("Hello "+username+"<hr>")
+               console.log(country+"<hr>")
+               const val = 100
+               
+               var num = 10
+               if(num>5){
+                   var country = "India" // a variable with local scope
+                   let name = "John"
+                   //val = 210
+                   console.log("Inside if "+username+" "+country+" "+name+"<hr>")
+               }
+               // Ideally,by default a variable with local scope must not be available outside the block where it is declared.
+
+               //name = "Smith"
+               console.log("Outside if "+country+" "+name+"<hr>")
+               //var keyword makes the variable available throughout the context and cannot maintain the local scope
+
+               const items = ["fruits","milk","bread"];
+               //items = ["fruits","milk","butter"];
+               items[1] = "laptop"
+               console.log(items.toString())
+        </script>
+    </body>
+</html>

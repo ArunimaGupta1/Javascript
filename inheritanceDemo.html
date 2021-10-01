@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+</head>
+
+<body>
+    <script language="Javascript" type="text/javascript">
+          class Person{
+              constructor(name,address){
+                  console.log("Person Constructor")
+                  this.name = name
+                  this.address = address
+              }
+              printPerson(){
+                  console.log("Method from person class")
+                  console.log("Name: "+this.name+" Address: "+this.address)
+              }
+          }
+        
+          class Student extends Person{
+              constructor(rollNumber,marks,name,address){
+                  super(name,address) //this is mandatory
+                  console.log("Student Constructor")
+                  this.rollNumber = rollNumber
+                  this.marks = marks
+              }
+              printStudent(){
+                  console.log("Method from student class")
+                  console.log("Roll Number: "+this.rollNumber+" Marks: "+this.marks+" Name: "+this.name+" Address: "+this.address)
+              }
+          }
+
+          var student = new Student(1,100,"Arunima","Ranchi");
+          student.printPerson()
+          student.printStudent()
+    </script>
+</body>
+</html>
